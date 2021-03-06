@@ -1,0 +1,11 @@
+mat-toolbar {
+    padding: 3rem;
+}
+
+mat-button-toggle-group {
+    margin-right: 3rem;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+  }

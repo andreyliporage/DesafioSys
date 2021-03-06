@@ -1,0 +1,10 @@
+<mat-toolbar>
+  <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+    <mat-button-toggle value="security" (click)="getEvento($event)" [checked]="security"><mat-icon>security</mat-icon></mat-button-toggle>
+    <mat-button-toggle value="perm_identity" (click)="getEvento($event)" [checked]="perm"><mat-icon>perm_identity</mat-icon></mat-button-toggle>
+  </mat-button-toggle-group>
+
+  <app-pesquisa></app-pesquisa>
+
+  <span class="example-spacer"></span>
+</mat-toolbar>
