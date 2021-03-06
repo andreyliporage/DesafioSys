@@ -25,3 +25,7 @@ mat-button-toggle-group {
 .icons {
     color: gray;
 }
+
+a {
+    cursor: pointer;
+}
