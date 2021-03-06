@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "DesafioSys"
+  "defaultProject": "DesafioSys",
+  "cli": {
+    "analytics": false
+  }
 }
