@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { FiltroComponent } from './components/filtro/filtro.component';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +12,7 @@ export class HeaderComponent implements OnInit {
   security = false;
   perm = true;
 
-  constructor() { }
+  constructor(private filtro: MatDialog) { }
 
   ngOnInit() {
   }
@@ -20,6 +22,19 @@ export class HeaderComponent implements OnInit {
       this.perm == false;
       this.security = true;
     } 
+  }
+
+  abreFiltro() {
+    const filtroRef = this.filtro.open(FiltroComponent, {
+      width: '50vw',
+      height: '100vh'
+    });
+
+    filtroRef.updatePosition({
+      top: '0',
+      right: '0',
+      bottom: '0'
+    })
   }
 
 }
