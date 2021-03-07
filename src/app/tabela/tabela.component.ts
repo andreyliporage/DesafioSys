@@ -23,5 +23,4 @@ export class TabelaComponent implements OnInit {
       falha => console.log(falha)
       );
   }
-
 }
