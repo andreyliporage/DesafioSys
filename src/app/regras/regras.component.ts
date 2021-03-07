@@ -10,7 +10,7 @@ const DATA_MOCK: Regra[] = [
 @Component({
   selector: 'app-regras',
   templateUrl: './regras.component.html',
-  styleUrls: ['./regras.component.css']
+  styleUrls: ['./regras.component.scss']
 })
 export class RegrasComponent implements OnInit {
   
