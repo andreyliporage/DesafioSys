@@ -2,13 +2,11 @@
     margin-bottom: 1.5rem;
 }
 
-.content {
-    height: 100vh;
-}
-
 mat-dialog-content {
     background-color: rgba(128, 128, 128, 0.116);
     padding: 2rem;
+    height: 100vh;
+    max-height: 100vh !important;
 }
 
 .spacer {

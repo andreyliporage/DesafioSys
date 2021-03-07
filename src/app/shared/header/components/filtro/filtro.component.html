@@ -6,34 +6,32 @@
   </mat-dialog-actions>
 </div>
 
-<div class="content">
-  <mat-dialog-content style="margin-bottom: 5rem;" class="mat-typography">
-    <p style="font-style: italic; font-size: 1rem;">
-      Utilize os filtros abaixo para refinar os resultados da tabela, clique no botão APLICAR para salvar
-      as alterações.
-    </p>
+<mat-dialog-content class="mat-typography">
+  <p style="font-style: italic; font-size: 1rem;">
+    Utilize os filtros abaixo para refinar os resultados da tabela, clique no botão APLICAR para salvar
+    as alterações.
+  </p>
 
-    <div class="spacer"></div>
-  
-    <div class="select">
-      <mat-icon style="vertical-align: text-bottom; margin-right: 0.4rem;">date_range</mat-icon>
-      <select style="display: inline;">
-        <option value="0"> TODAS AS DATAS DE INCLUSÃO</option>
-      </select>
-    </div>
-    <div class="select">
-      <mat-icon style="vertical-align: text-bottom; margin-right: 0.4rem;">date_range</mat-icon>
-      <select style="display: inline;">
-        <option value="0"> TODAS AS DATAS DE ALTERAÇÃO</option>
-      </select>
-    </div>
-    <div class="select" style="margin-bottom: 2rem;">
-      <mat-icon style="vertical-align: text-bottom; margin-right: 0.4rem;">bubble_chart</mat-icon>
-      <select style="display: inline;">
-        <option value="0">ATIVOS E INATIVOS</option>
-      </select>
-    </div>
-    <button class="aplicar" mat-stroked-button disabled>APLICAR</button>
-  </mat-dialog-content>
-</div>
+  <div class="spacer"></div>
+
+  <div class="select">
+    <mat-icon style="vertical-align: text-bottom; margin-right: 0.4rem;">date_range</mat-icon>
+    <select style="display: inline;">
+      <option value="0"> TODAS AS DATAS DE INCLUSÃO</option>
+    </select>
+  </div>
+  <div class="select">
+    <mat-icon style="vertical-align: text-bottom; margin-right: 0.4rem;">date_range</mat-icon>
+    <select style="display: inline;">
+      <option value="0"> TODAS AS DATAS DE ALTERAÇÃO</option>
+    </select>
+  </div>
+  <div class="select" style="margin-bottom: 2rem;">
+    <mat-icon style="vertical-align: text-bottom; margin-right: 0.4rem;">bubble_chart</mat-icon>
+    <select style="display: inline;">
+      <option value="0">ATIVOS E INATIVOS</option>
+    </select>
+  </div>
+  <button class="aplicar" mat-stroked-button disabled>APLICAR</button>
+</mat-dialog-content>
 
