@@ -1,0 +1,21 @@
+table {
+    width: 80rem;
+}
+
+table th {
+    font-weight: bold;
+}
+
+table tr:hover {
+    background-color: rgb(170, 170, 170);
+
+    .icons mat-icon {
+        display: inline;
+    }
+}
+
+.icons mat-icon {
+    font-size: 1.5rem;
+    color: black;
+    display: none;
+}

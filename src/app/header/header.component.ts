@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   security = false;
   perm = true;
 
-  constructor(private filtro: MatDialog, private editar: MatDialog) { }
+  constructor(private filtro: MatDialog) { }
 
   ngOnInit() {
   }
@@ -36,17 +36,4 @@ export class HeaderComponent implements OnInit {
       bottom: '0'
     })
   }
-
-  abreEditar() {
-    const filtroRef = this.editar.open(EditarComponent, {
-      width: '40vw',
-    });
-
-    filtroRef.updatePosition({
-      top: '0',
-      right: '0',
-      bottom: '0'
-    })
-  }
-
 }

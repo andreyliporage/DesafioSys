@@ -11,37 +11,47 @@
 
   <ng-container matColumnDef="nomeUsuario">
     <th mat-header-cell *matHeaderCellDef> USUÁRIO </th>
-    <td mat-cell *matCellDef="let array"> {{array.nomeUsuario}} </td>
+    <td mat-cell *matCellDef="let uruario"> {{uruario.nomeUsuario}} </td>
   </ng-container>
 
   <ng-container matColumnDef="email">
     <th mat-header-cell *matHeaderCellDef> EMAIL </th>
-    <td mat-cell *matCellDef="let array"> {{array.email}} </td>
+    <td mat-cell *matCellDef="let uruario"> {{uruario.email}} </td>
   </ng-container>
 
   <ng-container matColumnDef="dataInclusao">
     <th mat-header-cell *matHeaderCellDef> DATA DE INCLUSÃO </th>
-    <td mat-cell *matCellDef="let array"> {{array.dataInclusao | date:'dd/MM/yyyy'}} </td>
+    <td mat-cell *matCellDef="let uruario"> {{uruario.dataInclusao | date:'dd/MM/yyyy'}} </td>
   </ng-container>
 
   <ng-container matColumnDef="dataAlteracao">
     <th mat-header-cell *matHeaderCellDef> DATA DE ALTERAÇÃO </th>
-    <td mat-cell *matCellDef="let array"> {{array.dataAlteracao | date:'dd/MM/yyyy'}} </td>
+    <td mat-cell *matCellDef="let uruario"> {{uruario.dataAlteracao | date:'dd/MM/yyyy'}} </td>
   </ng-container>
 
   <ng-container matColumnDef="regras">
     <th mat-header-cell *matHeaderCellDef> REGRAS </th>
-    <td mat-cell *matCellDef="let array"> {{array.regras}} </td>
+    <td mat-cell *matCellDef="let uruario"> {{uruario.regras}} </td>
   </ng-container>
 
   <ng-container matColumnDef="status">
     <th mat-header-cell *matHeaderCellDef> STATUS </th>
-    <td mat-cell *matCellDef="let array" style="color: green; font-weight: bold;"> {{array.status}} </td>
+    <td mat-cell *matCellDef="let uruario" style="color: green; font-weight: bold;"> {{uruario.status}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="edicao">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td class="icons" mat-cell *matCellDef="let uruario" style="cursor: pointer;">
+      <a><mat-icon style="margin-right: 0.8rem;">delete</mat-icon></a>
+      <a><mat-icon style="margin-right: 0.8rem;">assignment_returned</mat-icon></a>
+      <a><mat-icon style="margin-right: 0.8rem;">security</mat-icon></a>
+      <a><mat-icon (click)="abreEditar()" >edit</mat-icon></a>
+    </td>
   </ng-container>
 
   <ng-container matColumnDef="acoes">
     <th mat-header-cell *matHeaderCellDef> AÇÕES </th>
-    <td mat-cell *matCellDef="let array" style="cursor: pointer;"><a><mat-icon>more_vert</mat-icon></a> </td>
+    <td mat-cell *matCellDef="let uruario" style="cursor: pointer;"><a><mat-icon>more_vert</mat-icon></a> </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
