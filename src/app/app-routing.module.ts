@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HeaderComponent } from './shared/header/header.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: '', component: HeaderComponent }
+  { path: '', redirectTo: 'home', pathMatch: 'prefix' },
+  { path: 'home', component: HomeComponent }
 ];
 
 @NgModule({
