@@ -1,6 +1,7 @@
 import { SelectionModel } from '@angular/cdk/collections';
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
+import { TabelaService } from 'src/app/services/tabela.service';
 import { Usuario } from 'src/app/shared/models/usuario';
 
 @Component({
@@ -10,65 +11,18 @@ import { Usuario } from 'src/app/shared/models/usuario';
 })
 export class TabelaComponent implements OnInit {
 
-  test = true;
-
-  array: Usuario[] = [
-    {
-    nomeUsuario: "ANPINA",
-    email: "antonio.pina@tvglobo.com.br",
-    dataInclusao: new Date(2019, 5, 28),
-    dataAlteracao: new Date(2019, 5, 30),
-    regras: "01",
-    status: "ATIVO"
-    },
-    {
-      nomeUsuario: "CCHANG",
-      email: "ciro.chang@tvglobo.com.br",
-      dataInclusao: new Date(2019, 5, 28),
-      dataAlteracao: new Date(2019, 5, 30),
-      regras: "01",
-      status: "ATIVO"
-    },
-    {
-      nomeUsuario: "TMARCAL",
-      email: "thiago.marcal@tvglobo.com.br",
-      dataInclusao: new Date(2019, 5, 28),
-      dataAlteracao: new Date(2019, 5, 30),
-      regras: "01",
-      status: "ATIVO"
-    },
-    {
-      nomeUsuario: "ECGIANN",
-      email: "ecgiannotto@tvglobo.com.br",
-      dataInclusao: new Date(2019, 5, 28),
-      dataAlteracao: new Date(2019, 5, 30),
-      regras: "01",
-      status: "ATIVO"
-    },
-    {
-      nomeUsuario: "YFERNAND",
-      email: "yuri.vasquez@tvglobo.com.br",
-      dataInclusao: new Date(2019, 5, 28),
-      dataAlteracao: new Date(2019, 5, 30),
-      regras: "01",
-      status: "ATIVO"
-    },
-    {
-      nomeUsuario: "PLACERDA",
-      email: "pedro.soares.lacerda@tvglobo.com.br",
-      dataInclusao: new Date(2019, 5, 28),
-      dataAlteracao: new Date(2019, 5, 30),
-      regras: "01",
-      status: "ATIVO"
-    }
-  ]
+  usuarios: Usuario[] = [];
 
   displayedColumns: string[] = ['nomeUsuario', 'email', 'dataInclusao', 'dataAlteracao', 'regras', 'status']
-  dataSource = new MatTableDataSource<Usuario>(this.array);
+  dataSource = new MatTableDataSource<Usuario>(this.usuarios);
 
-  constructor() { }
+  constructor(private tabelaService: TabelaService) { }
 
   ngOnInit() {
+    this.tabelaService.getUsuarios().subscribe(
+      result => this.usuarios = result,
+      falha => console.log(falha)
+      );
   }
 
 }
