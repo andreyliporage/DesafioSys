@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
   getEvento(event: any) {
     if(event.value == "security") {
       this.perm == false;
-      this.security = true;
+      this.security == true;
     } 
   }
 
