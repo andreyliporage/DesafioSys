@@ -27,6 +27,10 @@ h2 {
     opacity: 0.4;
 }
 
+.posterior {
+    margin-left: 3rem;
+}
+
 .paginar mat-icon {
     vertical-align: bottom;
 }
