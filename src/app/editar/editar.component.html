@@ -1,0 +1,39 @@
+<div mat-dialog-title>
+  <mat-icon style="margin-right: 1rem; vertical-align: text-bottom;">mode_edit</mat-icon>
+  <h2 style="display: inline; vertical-align: middle;" mat-dialog-title>EDITAR</h2>
+  <mat-dialog-actions style="display: inline;">
+    <button class="close" mat-button mat-dialog-close style="float: right; vertical-align: top;"><mat-icon>close</mat-icon></button>
+  </mat-dialog-actions>
+</div>
+
+<div class="paginar">
+  <div class="anterior">
+    <mat-icon style="margin-right: 0.5rem;">keyboard_arrow_left</mat-icon>
+    <label>USUÁRIO ANTERIOR</label>
+  </div>
+  <div class="posterior">
+    <label style="margin-right: 0.5rem;">USUÁRIO SEGUINTE</label>
+    <mat-icon>keyboard_arrow_right</mat-icon>
+  </div>
+</div>
+
+<mat-dialog-content class="mat-typography">
+
+  <mat-form-field appearance="fill">
+    <mat-label>EMAIL</mat-label>
+    <input matInput [formControl]="email">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>USUÁRIO</mat-label>
+    <input matInput [formControl]="usuario">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>NOME</mat-label>
+    <input matInput placeholder="INFORME O NOME DO USUÁRIO" [formControl]="nomeUsuario">
+  </mat-form-field>
+  
+  <button class="aplicar" mat-stroked-button mat-dialog-close [disabled]="nomeUsuario.invalid">APLICAR</button>
+</mat-dialog-content>
+

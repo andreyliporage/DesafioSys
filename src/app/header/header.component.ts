@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { EditarComponent } from '../editar/editar.component';
 import { FiltroComponent } from './components/filtro/filtro.component';
 
 @Component({
@@ -12,7 +13,7 @@ export class HeaderComponent implements OnInit {
   security = false;
   perm = true;
 
-  constructor(private filtro: MatDialog) { }
+  constructor(private filtro: MatDialog, private editar: MatDialog) { }
 
   ngOnInit() {
   }
@@ -26,6 +27,18 @@ export class HeaderComponent implements OnInit {
 
   abreFiltro() {
     const filtroRef = this.filtro.open(FiltroComponent, {
+      width: '40vw',
+    });
+
+    filtroRef.updatePosition({
+      top: '0',
+      right: '0',
+      bottom: '0'
+    })
+  }
+
+  abreEditar() {
+    const filtroRef = this.editar.open(EditarComponent, {
       width: '40vw',
     });
 
