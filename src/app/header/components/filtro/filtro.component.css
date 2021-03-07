@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');
+
 .header {
     margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.5rem !important;
 }
 
 mat-dialog-content {
