@@ -2,7 +2,7 @@ import { SelectionModel } from '@angular/cdk/collections';
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { TabelaService } from 'src/app/services/tabela.service';
-import { Usuario } from 'src/app/shared/models/usuario';
+import { Usuario } from 'src/app/models/usuario';
 
 @Component({
   selector: 'app-tabela',

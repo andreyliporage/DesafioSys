@@ -3,7 +3,7 @@ import { CommonModule } from "@angular/common";
 
 import { HeaderComponent } from "./header/header.component";
 import { PesquisaComponent } from "./header/components/pesquisa/pesquisa.component";
-import { TabelaComponent } from "./header/components/tabela/tabela.component";
+import { TabelaComponent } from "../tabela/tabela.component";
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
