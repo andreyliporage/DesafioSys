@@ -1,4 +1,3 @@
-import { SelectionModel } from '@angular/cdk/collections';
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { TabelaService } from 'src/app/services/tabela.service';
@@ -13,7 +12,7 @@ export class TabelaComponent implements OnInit {
 
   usuarios: Usuario[] = [];
 
-  displayedColumns: string[] = ['nomeUsuario', 'email', 'dataInclusao', 'dataAlteracao', 'regras', 'status']
+  displayedColumns: string[] = ['checkBox', 'nomeUsuario', 'email', 'dataInclusao', 'dataAlteracao', 'regras', 'status', 'acoes']
   dataSource = new MatTableDataSource<Usuario>(this.usuarios);
 
   constructor(private tabelaService: TabelaService) { }
