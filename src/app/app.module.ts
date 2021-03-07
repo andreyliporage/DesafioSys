@@ -24,17 +24,19 @@ import { TabelaComponent } from './tabela/tabela.component';
 import { FiltroComponent } from './header/components/filtro/filtro.component';
 import { PesquisaComponent } from './header/components/pesquisa/pesquisa.component';
 import { EditarComponent } from './editar/editar.component';
+import { RegrasComponent } from './regras/regras.component';
 
 
 @NgModule({
-  declarations: [			
+  declarations: [				
     AppComponent,
     HomeComponent,
     HeaderComponent,
     TabelaComponent,
     FiltroComponent,
     PesquisaComponent,
-    EditarComponent
+    EditarComponent,
+    RegrasComponent
    ],
   imports: [
     BrowserModule,
