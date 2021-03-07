@@ -26,8 +26,7 @@ export class HeaderComponent implements OnInit {
 
   abreFiltro() {
     const filtroRef = this.filtro.open(FiltroComponent, {
-      width: '50vw',
-      height: '100vh'
+      width: '40vw',
     });
 
     filtroRef.updatePosition({

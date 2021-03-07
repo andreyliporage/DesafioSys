@@ -1,0 +1,43 @@
+.header {
+    margin-bottom: 1.5rem;
+}
+
+.content {
+    height: 100vh;
+}
+
+mat-dialog-content {
+    background-color: rgba(128, 128, 128, 0.116);
+    padding: 2rem;
+}
+
+.spacer {
+    width: 2rem;
+    height: 0.3rem;
+    background-color: rgba(128, 128, 128, 0.116);
+    opacity: 0.9;
+}
+
+.select select {
+    background-color: #eeeeee;
+    background-position: center;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    width: 90%;
+    height: 5rem;
+    color: rgb(211, 62, 92);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+mat-icon {
+    opacity: 0.5;
+}
+
+.aplicar {
+    width: 95%;
+    height: 4rem;
+    margin-left: 1rem;
+    color: rgb(211, 62, 92);
+    border-color: rgb(211, 62, 92);
+}
