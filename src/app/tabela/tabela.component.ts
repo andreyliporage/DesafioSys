@@ -5,6 +5,9 @@ import { Usuario } from 'src/app/models/usuario';
 import { MatDialog } from '@angular/material/dialog';
 import { EditarComponent } from '../editar/editar.component';
 import { RegrasComponent } from '../regras/regras.component';
+import { HeaderService } from '../services/header.service';
+import { TOUCH_BUFFER_MS } from '@angular/cdk/a11y';
+import { ThrowStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-tabela',
@@ -13,6 +16,7 @@ import { RegrasComponent } from '../regras/regras.component';
 })
 export class TabelaComponent implements OnInit {
 
+  filtro: string = '';
   usuarios: Usuario[] = [];
 
   displayedColumns: string[] = ['checkBox', 'nomeUsuario', 'email', 'dataInclusao', 'dataAlteracao', 'regras', 'status', 'edicao' ,'acoes']
@@ -21,8 +25,23 @@ export class TabelaComponent implements OnInit {
   constructor(private tabelaService: TabelaService,  private editar: MatDialog, private regras: MatDialog) { }
 
   ngOnInit() {
+    this.getUsuarios(this.filtro);
+
+    HeaderService.filtro.subscribe((evento: string) => {
+      this.filtro = evento;
+      this.getUsuarios(this.filtro);
+    });
+  }
+
+  getUsuarios(filtro?: any) {
     this.tabelaService.getUsuarios().subscribe(
-      result => this.usuarios = result,
+      result => {
+        if (filtro != '') {
+          this.usuarios = result.filter(usuario => usuario.nomeUsuario.toLowerCase() == filtro.toLowerCase());
+          return;
+        }
+        this.usuarios = result;
+      },
       falha => console.log(falha)
     );
   }

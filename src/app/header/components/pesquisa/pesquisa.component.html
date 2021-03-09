@@ -1,7 +1,7 @@
-<form class="form">
+<form #form class="form">
   <mat-form-field class="example-full-width">
-    <mat-label>Pesquisar...</mat-label>
-    <input type="text" matInput>
+    <mat-label>Pesquisar Usuário...</mat-label>
+    <input (change)="pesquisa($event)" type="text" matInput [formControl]="pesquisarForm">
     <mat-icon matSuffix>search</mat-icon>
   </mat-form-field>
 </form>

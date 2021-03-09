@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { HeaderService } from 'src/app/services/header.service';
 
 @Component({
   selector: 'app-pesquisa',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PesquisaComponent implements OnInit {
 
+  pesquisarForm = new FormControl();
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  pesquisa(event: any) {
+    HeaderService.filtro.emit(event.target.value);
   }
 
 }
